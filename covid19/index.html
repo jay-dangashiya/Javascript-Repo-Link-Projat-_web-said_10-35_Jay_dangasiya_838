@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID Tracker</title>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white max-w-lg w-full p-8 rounded-3xl shadow-2xl border border-gray-200">
+
+    <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-6">
+      COVID-19 Live Tracker
+    </h1>
+
+    <div class="flex items-center gap-3 mb-5">
+      <input id="countryInput" 
+             type="text" 
+             placeholder="Type a country..."
+             class="flex-1 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm">
+
+      <button id="getData"
+              class="px-5 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 active:scale-95 transition">
+        Go
+      </button>
+    </div>
+
+    <p id="error" class="text-red-600 text-center text-sm font-medium mb-3"></p>
+
+    <div id="result" class="space-y-4"></div>
+
+  </div>
+
+  <script src="./javascrip.js"></script>
+
+</body>
