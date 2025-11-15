@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1 class="title">🌤️ Weather Finder</h1>
+
+
+        <div class="search-area">
+            <input id="city_Name" type="search" placeholder="Type city name...">
+            <button id="Search" class="btn">Get Weather</button>
+        </div>
+
+
+        <div id="loader" class="loader hidden">Loading...</div>
+
+
+        <p id="error" class="error-msg"></p>
+
+        <div id="all_Data" class="weather-card"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
