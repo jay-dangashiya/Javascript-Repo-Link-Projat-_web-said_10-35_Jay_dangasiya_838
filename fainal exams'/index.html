@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="max-w-3xl mx-auto py-8">
+    <h1 class="text-3xl font-bold text-center mb-6 text-green-700">Recipe Book</h1>
+    <!-- Add/Edit Recipe Form -->
+    <form id="recipeForm" class="bg-white p-6 rounded shadow mb-8 space-y-4">
+      <input type="hidden" id="recipeId">
+      <div>
+        <label class="block font-semibold mb-1">Title</label>
+        <input id="title" type="text" class="w-full border rounded px-3 py-2" required>
+      </div>
+       <div>
+        <label class="block font-semibold mb-1"> Image</label>
+        <input id="Image" type="text" class="w-full border rounded px-3 py-2" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Ingredients </label>
+        <input id="ingredients" type="text" class="w-full border rounded px-3 py-2" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Instructions</label>
+        <textarea id="instructions" class="w-full border rounded px-3 py-2" rows="2"></textarea>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Cuisine Type</label>
+        <input id="cuisine" type="text" class="w-full border rounded px-3 py-2">
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Save Recipe</button>
+      <button type="button" id="cancelEdit" class="ml-2 px-4 py-2 rounded border border-gray-400 text-gray-600 hidden">Cancel</button>
+    </form>
+
+    <!-- Search & Filter -->
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-4 mb-6 space-y-2 md:space-y-0">
+      <input id="searchTitle" type="text" placeholder="Search by title..." class="border rounded px-3 py-2 flex-1">
+      <input id="searchIngredients" type="text" placeholder="Search by ingredients..." class="border rounded px-3 py-2 flex-1">
+      <select id="filterCuisine" class="border rounded px-3 py-2 flex-1">
+        <option value="">All Cuisines</option>
+      </select>
+      <button id="clearFilters" class="bg-gray-300 px-3 py-2 rounded text-gray-700">Clear</button>
+    </div>
+
+    <!-- Recipe List -->
+    <div id="recipeList" class="space-y-4"></div>
+  </div>
+<script src="./script.js"></script>
+ </body>
+ </html>
